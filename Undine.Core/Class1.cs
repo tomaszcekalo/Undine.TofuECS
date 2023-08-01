@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Undine.TofuECS
+namespace Undine.Core
 {
     public class Class1
     {
