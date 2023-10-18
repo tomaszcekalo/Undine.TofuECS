@@ -12,7 +12,7 @@ namespace Undine.TofuECS
     {
         protected Simulation _simulation;
 
-        public UnmanagedUnifiedSystem<A> System { get; set; }
+        public UnifiedSystem<A> System { get; set; }
 
         public void Initialize(Simulation s)
         {
@@ -41,7 +41,7 @@ namespace Undine.TofuECS
     {
         protected Simulation _simulation;
 
-        public UnmanagedUnifiedSystem<A, B> System { get; set; }
+        public UnifiedSystem<A, B> System { get; set; }
 
         public void Initialize(Simulation s)
         {
@@ -75,7 +75,7 @@ namespace Undine.TofuECS
     {
         protected Simulation _simulation;
 
-        public UnmanagedUnifiedSystem<A, B, C> System { get; set; }
+        public UnifiedSystem<A, B, C> System { get; set; }
 
         public void Initialize(Simulation s)
         {
@@ -113,7 +113,7 @@ namespace Undine.TofuECS
     {
         protected Simulation _simulation;
 
-        public UnmanagedUnifiedSystem<A, B, C, D> System { get; set; }
+        public UnifiedSystem<A, B, C, D> System { get; set; }
 
         public void Initialize(Simulation s)
         {

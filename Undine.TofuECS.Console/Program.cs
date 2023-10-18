@@ -27,7 +27,7 @@ for (int i = 0; i < 20; i++)
     Console.WriteLine("Y =" + entity.GetComponent<PositionComponent>().y);
 }
 
-public class SpeedSystem : UnmanagedUnifiedSystem<PositionComponent, VelocityComponent>
+public class SpeedSystem : UnifiedSystem<PositionComponent, VelocityComponent>
 {
     public override void ProcessSingleEntity(int entityId, ref PositionComponent a, ref VelocityComponent b)
     {
@@ -36,7 +36,7 @@ public class SpeedSystem : UnmanagedUnifiedSystem<PositionComponent, VelocityCom
     }
 }
 
-public class AccelerationSystem : UnmanagedUnifiedSystem<VelocityComponent, AccelerationComponent>
+public class AccelerationSystem : UnifiedSystem<VelocityComponent, AccelerationComponent>
 {
     public override void ProcessSingleEntity(int entityId, ref VelocityComponent a, ref AccelerationComponent b)
     {

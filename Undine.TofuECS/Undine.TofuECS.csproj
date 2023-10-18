@@ -1,17 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	  <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="TofuECS" Version="1.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Undine.Core\Undine.Core.csproj" />
+    <PackageReference Include="Undine.Core" Version="0.0.1" />
   </ItemGroup>
 
 </Project>

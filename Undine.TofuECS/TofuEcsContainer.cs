@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Tofunaut.TofuECS;
-using Undine.Core;
 using Undine.Core.Unmanaged;
 
 namespace Undine.TofuECS
@@ -20,7 +19,7 @@ namespace Undine.TofuECS
         public void Exception(Exception e) => throw e;
     }
 
-    public class TofuEcsContainer : UnmanagedEcsContainer
+    public class TofuEcsContainer : EcsContainer
     {
         public List<Tofunaut.TofuECS.ISystem> Systems { get; }
         public Simulation Simulation { get; set; }
@@ -56,7 +55,7 @@ namespace Undine.TofuECS
             //base.Init();
         }
 
-        public override void AddSystem<A>(UnmanagedUnifiedSystem<A> system)
+        public override void AddSystem<A>(UnifiedSystem<A> system)
         {
             this.RegisterComponentType<A>();
             var result = new TofuSystem<A>()
@@ -66,7 +65,7 @@ namespace Undine.TofuECS
             this.Systems.Add(result);
         }
 
-        public override void AddSystem<A, B>(UnmanagedUnifiedSystem<A, B> system)
+        public override void AddSystem<A, B>(UnifiedSystem<A, B> system)
         {
             this.RegisterComponentType<A>();
             this.RegisterComponentType<B>();
@@ -77,7 +76,7 @@ namespace Undine.TofuECS
             this.Systems.Add(result);
         }
 
-        public override void AddSystem<A, B, C>(UnmanagedUnifiedSystem<A, B, C> system)
+        public override void AddSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         {
             this.RegisterComponentType<A>();
             this.RegisterComponentType<B>();
@@ -89,7 +88,7 @@ namespace Undine.TofuECS
             this.Systems.Add(result);
         }
 
-        public override void AddSystem<A, B, C, D>(UnmanagedUnifiedSystem<A, B, C, D> system)
+        public override void AddSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         {
             this.RegisterComponentType<A>();
             this.RegisterComponentType<B>();
@@ -112,7 +111,7 @@ namespace Undine.TofuECS
             return result;
         }
 
-        public override Core.ISystem GetSystem<A>(UnmanagedUnifiedSystem<A> system)
+        public override Core.ISystem GetSystem<A>(UnifiedSystem<A> system)
         {
             this.RegisterComponentType<A>();
             var result = new TofuSystem<A>()
@@ -122,7 +121,7 @@ namespace Undine.TofuECS
             return result;
         }
 
-        public override Core.ISystem GetSystem<A, B>(UnmanagedUnifiedSystem<A, B> system)
+        public override Core.ISystem GetSystem<A, B>(UnifiedSystem<A, B> system)
         {
             var result = new TofuSystem<A, B>()
             {
@@ -131,7 +130,7 @@ namespace Undine.TofuECS
             return result;
         }
 
-        public override Core.ISystem GetSystem<A, B, C>(UnmanagedUnifiedSystem<A, B, C> system)
+        public override Core.ISystem GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         {
             var result = new TofuSystem<A, B, C>()
             {
@@ -140,7 +139,7 @@ namespace Undine.TofuECS
             return result;
         }
 
-        public override Core.ISystem GetSystem<A, B, C, D>(UnmanagedUnifiedSystem<A, B, C, D> system)
+        public override Core.ISystem GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         {
             var result = new TofuSystem<A, B, C, D>()
             {

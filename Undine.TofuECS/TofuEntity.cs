@@ -7,7 +7,7 @@ using Undine.Core.Unmanaged;
 
 namespace Undine.TofuECS
 {
-    public class TofuEntity : IUnmanagedEntity
+    public class TofuEntity : IUnifiedEntity
     {
         private Simulation _simulation;
 
