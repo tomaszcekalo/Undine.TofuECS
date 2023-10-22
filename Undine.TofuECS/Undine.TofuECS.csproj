@@ -5,7 +5,20 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 	  <Version>0.0.1</Version>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Description>Undine bindings for TofuEcs</Description>
+	  <PackageProjectUrl>https://github.com/tomaszcekalo/Undine.TofuECS</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <RepositoryUrl>https://github.com/tomaszcekalo/Undine.TofuECS</RepositoryUrl>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="TofuECS" Version="1.0.3" />
