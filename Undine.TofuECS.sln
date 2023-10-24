@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undine.TofuECS", "Undine.To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undine.TofuECS.Console", "Undine.TofuECS.Console\Undine.TofuECS.Console.csproj", "{0584AAED-F206-494B-9E0E-3CBC0D923A3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Undine.TofuECS.Tests", "Undine.TofuECS.Tests\Undine.TofuECS.Tests.csproj", "{4B6DC107-FC72-4E18-A430-D784FC26FC5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0584AAED-F206-494B-9E0E-3CBC0D923A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0584AAED-F206-494B-9E0E-3CBC0D923A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0584AAED-F206-494B-9E0E-3CBC0D923A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B6DC107-FC72-4E18-A430-D784FC26FC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6DC107-FC72-4E18-A430-D784FC26FC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6DC107-FC72-4E18-A430-D784FC26FC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6DC107-FC72-4E18-A430-D784FC26FC5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
